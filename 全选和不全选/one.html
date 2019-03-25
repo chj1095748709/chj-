@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>全选</button>
+		<button>全不选</button>
+		<button>反选</button>
+		<br />
+		篮球：<input type="checkbox" name="lanqiu" checked=""/>
+		<br />
+		篮球：<input type="checkbox" name="lanqiu" />
+		<br />
+		篮球：<input type="checkbox" name="lanqiu" />
+		<br />
+		篮球：<input type="checkbox" name="lanqiu" />
+		<script>
+			//获取Buton input元素
+		var btn=document.getElementsByTagName("button");
+		//		console.log(btn);
+		var checkboxs=document.getElementsByTagName("input");
+			//绑定事件
+			btn[0].onclick =function(){
+				for(var i=0;i<checkboxs.length;i++){
+//有疑惑			checkboxs[i].setAttribute("checked",true);
+				checkboxs[i].checked=true;
+				}
+			}
+			btn[1].onclick =function(){
+				for(var i=0;i<checkboxs.length;i++){
+					checkboxs[i].checked=false;
+				}
+			}
+			btn[2].onclick =function(){
+				for(var i=0;i<checkboxs.length;i++){
+					if(checkboxs[i].checked==true){
+						checkboxs[i].checked=false;
+					}else{
+						checkboxs[i].checked=true;
+					}
+				}
+			}
+</script>
+	</body>
+</html>
